@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>FBus.Business</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SearchModel\**" />
+    <EmbeddedResource Remove="SearchModel\**" />
+    <None Remove="SearchModel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseAdmin" Version="2.3.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.14.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Twilio" Version="5.76.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FBus.Data\FBus.Data.csproj" />
+  </ItemGroup>
+
+</Project>
